@@ -11,6 +11,9 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  rospy_tutorials
+  std_srvs
+  my_robot_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -139,6 +142,13 @@ add_executable(robot_news_radio_transmitter src/robot_news_radio_transmitter.cpp
 add_executable(smartphone src/smartphone.cpp)
 add_executable(number_pubsub src/numberPubSub.cpp)
 add_executable(number_publisher src/numberPublisher.cpp)
+add_executable(add_two_ints_server src/add_two_ints_server.cpp)
+add_executable(add_two_ints_client src/add_two_ints_client.cpp)
+add_executable(number_pubsubreset src/numberPubSubReset.cpp)
+add_executable(hw_publisher src/hw_publisher.cpp)
+add_executable(hw_status_subscriber src/hw_status_subscriber.cpp)
+
+
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -158,6 +168,12 @@ target_link_libraries(robot_news_radio_transmitter ${catkin_LIBRARIES})
 target_link_libraries(smartphone ${catkin_LIBRARIES})
 target_link_libraries(number_pubsub ${catkin_LIBRARIES})
 target_link_libraries(number_publisher ${catkin_LIBRARIES})
+target_link_libraries(add_two_ints_server ${catkin_LIBRARIES})
+target_link_libraries(add_two_ints_client ${catkin_LIBRARIES})
+target_link_libraries(number_pubsubreset ${catkin_LIBRARIES})
+target_link_libraries(hw_publisher ${catkin_LIBRARIES})
+target_link_libraries(hw_status_subscriber ${catkin_LIBRARIES})
+
 #############
 ## Install ##
 #############
