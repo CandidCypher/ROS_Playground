@@ -54,7 +54,6 @@ if __name__ == "__main__":
         response = led_service(1, True)
         #rospy.loginfo(f"Service Response: {response}")
 
-
     while not rospy.is_shutdown():
         elapsed_time = time()
         if elapsed_time - time_on >= on_duration:

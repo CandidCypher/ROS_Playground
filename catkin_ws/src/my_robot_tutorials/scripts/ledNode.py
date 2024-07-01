@@ -20,6 +20,8 @@ def cb_recieve_battery_percent(bat_percent:Int64):
 
 def handle_set_state(ledState:setLEDState._request_class):
     global led_states
+    if ledState.ledIndex > len(led_states.status) or ledState.ledIndex < 0:
+        return {"successs":False}
     led_states.status[ledState.ledIndex] = ledState.ledStatus
     #rospy.loginfo(f"LED States: {led_states}")
     return {"successs":True}
